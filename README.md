@@ -5,7 +5,7 @@ RandomNums2File generates random numbers and writes them to individual lines in 
 How to use this Python script
 ----------------------------
 
-There are two variables in the script that need to be changed to specified values make it work.
+There are two variables in the script that need to be changed to specified values to make it work.
 
 **X** = The number of lines you want to generate
 
