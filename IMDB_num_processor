@@ -1,0 +1,18 @@
+import timeit
+
+start = timeit.default_timer()  # Starts a process timer
+
+with open('file1.txt', 'r') as file:
+   contents = file.readlines()  # Reads all contents of the file into primary memory
+
+with open('newfile2.txt', 'a+') as nf:  # Opens the output file
+  for row in contents:
+     number = row.strip('\n')
+     # number = DO WHATEVER YOU'RE DOING TO YOUR DATA HERE 
+     nf.write(str(number))  # Append to output file
+
+end = timeit.default_timer()  # Stop the process timer
+
+elapsed = end - start
+
+print('This process took', elapsed, 'seconds.')
