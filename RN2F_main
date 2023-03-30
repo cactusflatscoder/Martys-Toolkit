@@ -1,0 +1,10 @@
+class RandomNums2File:
+  def __init__:
+    pass
+  
+  def generator():
+      with open('FILENAME_HERE.txt', 'w') as f:
+          for i in range(X):
+              num = int(random.randint(0, Y))
+              f.write(str(num) + '\n')
+              
