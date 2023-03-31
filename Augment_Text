@@ -1,0 +1,14 @@
+import os, sys, nlpaug.augmenter.word as naw
+
+num_versions = input('How many variations would you like? ')
+print('\n')
+print('Working...\n\n')
+with open(os.path.join(sys.path[0], "FILENAME.txt"), "r", encoding='utf-8') as f:  # open the text file from the script’s directory
+    df = f.readlines()
+    # print(df)  # This is here for data verification and debugging. Uncomment the line to use.
+    # The next line converts the file input to a string so nlpaug can work with it
+    df = str(df)
+    for i in range (0, num_versions):
+        aug = naw.SynonymAug(aug_src='wordnet')
+        df_aug = aug.augment(df)
+        print(df_aug)
