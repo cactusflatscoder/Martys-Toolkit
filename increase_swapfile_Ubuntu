@@ -1,0 +1,7 @@
+swapon --show
+sudo swapoff /swapfile
+sudo dd if=/dev/zero of=/swapfile count=NUM_GBs bs=1G
+sudo mkswap /swapfile
+sudo chmod 0600 /swapfile
+sudo swapon /swapfile
+swapon --show
