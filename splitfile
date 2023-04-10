@@ -1,0 +1,17 @@
+def split_file(X, input_filename, output_filename):
+   input_file = input_filename
+   parts = []  # Iterate over items in this list when you need to retrieve the new file names
+   print('Splitting files...')
+   # Divide the size of the file by X to get the chunk size; X is the number of new files into which you're splitting the input file
+   chunk_size = os.path.getsize('FILENAME') // X
+   # Iterate over the range of X chunks
+   # Read the chunk_size bytes from the main file
+   with open(input_file, 'rb') as input:  # Open the input file for reading in binary format
+     for newfile in range(0, X):
+         output_file = f'output_filename{newfile}.txt'  # Append the iteration number to each output filename
+             # Open the output file for writing in binary format
+             with open(output_file, 'wb') as output:
+                 chunk = input.read(chunk_size)
+                 # Write the chunk to the output file and write the file name to a nested list within the parts list
+                 output.write(chunk)
+                 parts[newfile].append(output_file)
