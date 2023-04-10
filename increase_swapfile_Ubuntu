@@ -1,3 +1,4 @@
+#THIS IS A LINUX SHELL SCRIPT
 swapon --show
 sudo swapoff /swapfile
 sudo dd if=/dev/zero of=/swapfile count=NUM_GBs bs=1G
